@@ -1,0 +1,472 @@
+/* ---------------------------------- section */
+
+.sec--detail {
+  padding: vw-sp(70) 0 vw-sp(110) 0;
+  background-image: url(~assets/img/detail/bg.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .sec--detail {
+    padding: vw-pc(105) 0 vw-pc(115) 0;
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .sec--detail {
+    padding: 105px 0 115px 0;
+  }
+}
+
+
+/* ---------------------------------- detail */
+
+.detail {
+  width: 100%;
+}
+
+.detail > li {
+  position: relative;
+  margin-bottom: vw-sp(60);
+}
+
+.detail > li:last-child {
+  margin-bottom: 0;
+}
+
+
+.detail-box {
+  padding: vw-sp(40);
+  background-color: $color-base;
+  .check-list {
+    padding: vw-sp(25) vw-sp(18);
+  }
+}
+@media screen and (max-width: $breakpoint1-max) {
+
+  .detail-box {
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .detail {
+    width: vw-pc(780);
+  }
+
+  .detail > li {
+    margin-bottom: vw-pc(30);
+  }
+
+  .detail-box {
+    padding: vw-pc(30);
+    .check-list {
+      padding: vw-pc(15) vw-pc(8);
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .detail {
+    width: 780px;
+  }
+
+  .detail > li {
+    margin-bottom: 30px;
+  }
+
+  .detail-box {
+    padding: 30px;
+    .check-list {
+      padding: 15px 8px;
+    }
+  }
+}
+
+
+/* ---------------------------------- detail-sec-head */
+
+.detail-header {
+  position: relative;
+  left: vw-sp(10);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+  background-color: $color-main;
+  height: vw-sp(60);
+  transform: skewX(-20deg);
+}
+
+.detail-head {
+  color: $color-base;
+  font-size: vw-sp(34);
+  font-weight: 700;
+  transform: skewX(20deg);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .detail-header {
+    left: vw-pc(15);
+    height: vw-pc(45);
+  }
+
+  .detail-head {
+    font-size: vw-pc(20);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .detail-header {
+    left: 10px;
+    height: 45px;
+  }
+
+  .detail-head {
+    font-size: 20px; font-size: 2.0rem;
+  }
+}
+
+/* ---------------------------------- detail-reason */
+
+.detail-reason {
+  padding: 0 vw-sp(30);
+  border: vw-sp(3) solid $color-main;
+}
+
+.detail-reason li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: vw-sp(270);
+  border-bottom: 1px solid #b9c1ce;
+}
+
+.detail-reason li:last-child {
+  border-bottom: none;
+}
+
+.detail-reason-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: vw-sp(160);
+}
+
+.detail-reason li:nth-child(1) .detail-reason-image img {
+  width: vw-sp(56);
+}
+
+.detail-reason li:nth-child(2) .detail-reason-image img {
+  width: vw-sp(63);
+}
+
+.detail-reason li:nth-child(3) .detail-reason-image img {
+  width: vw-sp(110);
+}
+
+.detail-reason-content {
+  display: flex;
+  align-items: center;
+  width: vw-sp(370);
+  p {
+    line-height: 1.8em;
+  }
+}
+
+.detail-reason-head {
+  margin-bottom: .3em;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+
+@media screen and (min-width: $breakpoint1) {
+
+  .detail-reason {
+    padding: 0 vw-pc(30);
+    border: vw-pc(2) solid $color-main;
+  }
+
+  .detail-reason li {
+    height: vw-pc(135);
+  }
+
+  .detail-reason-image {
+    width: vw-pc(105);
+  }
+
+  .detail-reason li:nth-child(1) .detail-reason-image img {
+    width: vw-pc(46);
+  }
+
+  .detail-reason li:nth-child(2) .detail-reason-image img {
+    width: vw-pc(53);
+  }
+
+  .detail-reason li:nth-child(3) .detail-reason-image img {
+    width: vw-pc(100);
+  }
+
+  .detail-reason-content {
+    width: vw-pc(530);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .detail-reason {
+    padding: 0 30px;
+    border: 2px solid $color-main;
+  }
+
+  .detail-reason li {
+    height: 135px;
+  }
+
+  .detail-reason-image {
+    width: 105px;
+  }
+
+  .detail-reason li:nth-child(1) .detail-reason-image img {
+    width: 46px;
+  }
+
+  .detail-reason li:nth-child(2) .detail-reason-image img {
+    width: 53px;
+  }
+
+  .detail-reason li:nth-child(3) .detail-reason-image img {
+    width: 100px;
+  }
+
+  .detail-reason-content {
+    width: 530px;
+  }
+}
+
+/* ---------------------------------- accordion */
+
+
+.detail-acod {
+  width: 100%;
+  margin: vw-sp(20) auto 0 auto;
+}
+
+.detail-acod > li {
+  margin-bottom: vw-sp(20);
+  background-color: $color-base;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: vw-sp(15);
+}
+
+.detail-acod-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 1em 0 vw-sp(70);
+  height: vw-sp(90);
+  border-radius: vw-sp(15);
+  font-weight: 700;
+  line-height: 1.6em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.detail-acod-title::before, .detail-acod-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: vw-sp(28);
+  content: '';
+  display: inline-block;
+  width: vw-sp(28);
+  height: vw-sp(28);
+  background-image: url(~assets/img/common/plus.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+
+.detail-acod-title.is-active {
+  border-radius: vw-sp(15) vw-sp(15) 0 0;
+  background-color: #e9f9f2;
+}
+
+.detail-acod-title.is-active::before {
+  opacity: 0;
+}
+
+.detail-acod-title.is-active::after {
+  background-image: url(~assets/img/common/minus.png);
+}
+
+.detail-acod-content {
+  padding: 0 vw-sp(30);
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.detail-acod-content.is-open {
+  padding: vw-sp(20) vw-sp(30);
+  line-height: normal; /* numberに書き換える*/
+  height: auto;
+  opacity: 1;
+}
+
+.detail-course li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em 0 vw-sp(46);
+  min-height: vw-sp(80);
+  border-bottom: 1px solid #b9c1ce;
+}
+
+.detail-course li:last-child {
+  border-bottom: none;
+}
+
+.detail-course li:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  width: vw-sp(29);
+  height: vw-sp(29);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.detail-course li:nth-child(1)::before {
+  background-image: url(~assets/img/common/check_b.png);
+}
+
+.detail-course li:nth-child(2)::before {
+  background-image: url(~assets/img/common/movie_b.png);
+}
+
+.detail-course li:nth-child(3)::before {
+  background-image: url(~assets/img/common/note_b.png);
+}
+
+.detail-course li:after {
+  content: '▶︎';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 0.875em;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .detail-acod {
+    margin: vw-pc(10) auto 0 auto;
+  }
+
+  .detail-acod > li {
+    margin-bottom: vw-pc(10);
+    border-radius: vw-pc(10);
+  }
+
+  .detail-acod-title {
+    padding: 0 1em 0 vw-pc(50);
+    height: vw-pc(60);
+    border-radius: vw-pc(10);
+  }
+
+  .detail-acod-title::before, .detail-acod-title::after {
+    left: vw-pc(18);
+    width: vw-pc(18);
+    height: vw-pc(18);
+  }
+
+
+  .detail-acod-title.is-active {
+    border-radius: vw-pc(10) vw-pc(10) 0 0;
+  }
+
+  .detail-acod-content {
+    padding: 0 vw-pc(30);
+  }
+
+  .detail-acod-content.is-open {
+    padding: vw-pc(10) vw-pc(30);
+  }
+
+  .detail-course li {
+    padding: 0 1.5em 0 vw-pc(35);
+    min-height: vw-pc(60);
+  }
+
+  .detail-course li:before {
+    width: vw-pc(19);
+    height: vw-pc(19);
+  }
+
+  .detail-course li:after {
+    right: .5em;
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .detail-acod {
+    margin: 10px auto 0 auto;
+  }
+
+  .detail-acod > li {
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .detail-acod-title {
+    padding: 0 1em 0 50px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .detail-acod-title::before, .detail-acod-title::after {
+    left: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .detail-acod-title.is-active {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .detail-acod-content {
+    padding: 0 30px;
+  }
+
+  .detail-acod-content.is-open {
+    padding: 10px 30px;
+  }
+
+  .detail-course li {
+    padding: 0 1.5em 0 35px;
+    min-height: 60px;
+  }
+
+  .detail-course li:before {
+    width: 19px;
+    height: 19px;
+  }
+}
