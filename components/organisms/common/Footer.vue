@@ -108,8 +108,8 @@
             position: absolute;
             left: vw-pc(30);
             bottom: vw-pc(30);
-            padding: vw-pc(40) vw-pc(45);
-            width: vw-pc(300);
+            padding: vw-pc(20) vw-pc(30);
+            width: vw-pc(180);
         }
 
         .footer-logo li:first-child {
