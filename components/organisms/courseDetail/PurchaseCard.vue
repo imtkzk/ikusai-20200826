@@ -1,5 +1,5 @@
 <template>
-    <div class="detail-apply">
+    <div class="detail-apply" :class="{ 'nodisplay': scrollY > 1400 }">
       <div class="detail-apply-box">
         <div class="detail-apply-image">
           <div><img src="~/assets/img/detail/view.jpg" class="img--fit" alt="preview"></div>
@@ -48,7 +48,21 @@ export default {
         components: {
             SendForm,
             PayApply
-        }
+        },   
+        data() {
+    return {
+      // 座標を指定
+      scrollY: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      this.scrollY = window.scrollY
+    }
+  }
 }
 </script>
 
@@ -221,7 +235,18 @@ export default {
     width: vw-pc(360);
     z-index: 3;
   }
-
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.nodisplay {
+  opacity: 0;
+  transition: opacity .3s linear 0s;
+}
   .detail-apply-image {
     img {
       border-radius: vw-pc(10) vw-pc(10) 0 0;
