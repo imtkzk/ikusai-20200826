@@ -133,8 +133,8 @@
             position: absolute;
             left: 30px;
             bottom: 30px;
-            padding: 40px 45px;
-            width: 300px;
+            padding: 20px 45px;
+            width: 180px;
         }
 
         .footer-logo li:first-child {
