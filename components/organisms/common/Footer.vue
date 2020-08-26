@@ -132,7 +132,7 @@
         .footer-logo {
             position: absolute;
             left: 30px;
-            bottom: 30px;
+            bottom: 40px;
             padding: 20px 45px;
             width: 180px;
         }
