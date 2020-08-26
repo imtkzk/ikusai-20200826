@@ -13,6 +13,21 @@ for (let i = 0; i < title.length; i ++){
   title[i].addEventListener('click', toggle)
 }
 
+/*  learn accordion
+-------------------------------------------------------*/
+
+const acodTitle = document.querySelectorAll('.learn-acod-title');
+
+function toggle(){
+  const content = this.nextElementSibling;
+  this.classList.toggle('is-active');
+  content.classList.toggle('is-open');
+}
+
+for (let i = 0; i < acodTitle.length; i ++){
+  acodTitle[i].addEventListener('click', toggle)
+}
+
 
 /*  floathing
 -------------------------------------------------------*/

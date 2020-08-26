@@ -6,13 +6,11 @@
             </div>
             <h2>ディープラーニングハンズオンコース</h2>
             <div id="navigation" class="header-navi">
-                <nav class="header-navi__in">
-                    <div class="evaluation"><a href="#">このコースを評価する</a></div>
+                    <div class="evaluation-btn"><a href="#">このコースを評価する</a></div>
                     <div class="mypage-btn">
                         <div></div>
                         <a href="#"><span>マイページに戻る</span></a>
                     </div>
-                </nav>
             </div>
             <div id="toggle" class="toggle">
                 <span></span>
@@ -26,11 +24,14 @@
 <style lang="scss" scoped>
     @import "~assets/scss/style.scss";
 
+    .header-navi{
+        padding-right: vw-pc(30);
+    }
+
     .mypage-btn {
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
         margin: 0 auto;
         width: vw-sp(400);
         max-width: 100%;
@@ -44,7 +45,6 @@
         overflow: hidden;
         cursor: pointer;
     }
-
     .mypage-btn a {
         position: relative;
         display: flex;
@@ -61,11 +61,9 @@
         transition: all .5s ease;
         z-index: 2;
     }
-
     .mypage-btn a:hover {
         color: $color-base;
     }
-
     .mypage-btn>div {
         position: absolute;
         top: 0;
@@ -77,28 +75,23 @@
         transition: all .5s ease;
         z-index: 1;
     }
-
     .mypage-btn:hover>div {
         left: 0;
         height: 100%;
     }
-
     .mypage-btn span {
         display: block;
         width: 100%;
         font-size: vw-sp(20);
     }
-
     .mypage-btn span:nth-of-type(1) {
         margin-bottom: .5em;
     }
-
-
     @media screen and (min-width: $breakpoint1) {
 
         .mypage-btn {
             margin: 0;
-            width: vw-pc(300);
+            width: vw-pc(200);
             height: vw-pc(60);
         }
 
@@ -111,7 +104,6 @@
             height: vw-pc(60);
         }
     }
-
     @media screen and (min-width: $breakpoint2) {
 
         .mypage-btn {
@@ -130,8 +122,6 @@
             height: 60px;
         }
     }
-
-
     @media screen and (min-width: $breakpoint1) {
 
         .mypage-btn {
@@ -143,7 +133,6 @@
         }
 
     }
-
     @media screen and (min-width: $breakpoint2) {
 
         .mypage-btn span {
@@ -151,9 +140,20 @@
             font-size: 1.6rem;
         }
     }
-
+    .evaluation-btn{
+        margin-right: vw-pc(20);
+        font-weight: 600;
+    }
+    .evaluation-btn::before{
+        content:"★";
+        color: #cccccc;
+        font-size: 24px;
+        font-size: 2.4em;
+        vertical-align: middle;
+    }
     /*  header
 ------------------------------------------------------------------------------*/
+
 
     .header {
         position: fixed;
@@ -196,7 +196,8 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            width: calc(100% - #{vw-pc(280)});
+            padding-left: vw-pc(20);
+            border-left: #b9c1ce solid vw-pc(3);
         }
     }
 
@@ -215,9 +216,14 @@
             width: calc(100% - 280px);
         }
     }
+    .header h2{
+        font-weight: 600;
+        font-size: vw-pc(24);
+        letter-spacing: .2em;
+    }
+
+
     /* ------------------------------------ グローバルナビ（SP） */
-
-
     @media screen and (max-width: $breakpoint1) {
 
         .header-navi__in {
@@ -315,5 +321,8 @@
             display: none;
         }
     }
+
+
+
 
 </style>

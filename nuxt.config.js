@@ -39,7 +39,8 @@ export default {
     { src: '~/plugins/common.js', ssr: false },
     { src: '~/plugins/detail.js', ssr: false },
     { src: '~/plugins/pay.js', ssr: false },
-    { src: '@/plugins/vue-awesome-swiper.js', ssr: false } 
+    { src: '@/plugins/vue-awesome-swiper.js', ssr: false } ,
+    { src: '@/plugins/plugin.js', ssr: false }
   ],
   /*
   ** Auto import components
