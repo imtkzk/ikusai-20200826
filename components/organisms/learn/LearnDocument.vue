@@ -73,7 +73,7 @@
             <div class="inner_cell">
                 <div class="text_cell_render border-box-sizing rendered_html">
                     <p>こちらは画像です</p>
-                    <p><img src="img/sample.png" alt="sample"></p>
+                    <p><img src="~assets/img/learn/sample.png" alt="sample"></p>
                 </div>
             </div>
         </div>

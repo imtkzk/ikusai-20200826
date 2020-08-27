@@ -193,6 +193,7 @@ ul > li{
 }
 ol > li{
   list-style: decimal;
+  font-family: 'Montserrat', sans-serif;
 }
 a{
   color: #163261;
@@ -5015,6 +5016,14 @@ a.thumbnail.active {
   margin-bottom: 18px;
   border: 1px solid transparent;
   border-radius: 2px;
+}
+.alert::before{
+  content: "NOTE";
+  display: block;
+  font-weight: 700;
+  color: #16325e;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1em;
 }
 .alert h4 {
   margin-top: 0;
@@ -10498,6 +10507,11 @@ div.cell.selected.jupyter-soft-selected:before {
 }
 @media (max-width: 540px) {
   .prompt {
+    min-width: 8ex;
+  }
+}
+@media (max-width: 540px) {
+  .prompt {
     text-align: left;
   }
 }
@@ -11100,7 +11114,7 @@ div.output_unrecognized a:hover {
   line-height: 1.0;
 }
 .rendered_html h2 {
-  font-size: 30px;
+  font-size: 24px;
   margin: 1.27em 0 0 0;
   font-weight: bold;
   line-height: 2;
@@ -11108,7 +11122,7 @@ div.output_unrecognized a:hover {
   border-bottom: 3px solid #16325e
 }
 .rendered_html h3 {
-  font-size: 24px;
+  font-size: 18px;
   margin: 1.55em 0 0 0;
   font-weight: bold;
   line-height: 2;
@@ -11118,7 +11132,7 @@ div.output_unrecognized a:hover {
   padding: 10px 30px;
 }
 .rendered_html h4 {
-  font-size: 20px;
+  font-size: 15px;
   margin: 2em 0 0 0;
   font-weight: bold;
   line-height: 1.0;
@@ -11265,6 +11279,7 @@ div.output_unrecognized a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #ccc;
 }
 .rendered_html * + img {
   margin-top: 1em;
@@ -11273,6 +11288,7 @@ div.output_unrecognized a:hover {
 .rendered_html svg {
   max-width: 100%;
   height: auto;
+  border: 1px solid #ccc;
 }
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
@@ -13071,4 +13087,13 @@ div#notebook {
 .warning{
   padding: 20px;
   border:solid 3px #35d390;
+}
+
+.warning::before{
+  content: "CAUTION";
+  display: block;
+  font-weight: 700;
+  color: #35d390;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1em;
 }

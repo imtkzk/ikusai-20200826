@@ -15,9 +15,11 @@
                         <LearnTest />
                     </div>
                 </div>
-                <LearnContents />
+                <LearnContents class="none--sp" />
             </div>
         </div>
+        <MovieNavigation class="none--pc" />
+        <LearnContents class="none--pc" />
         <Footer />
     </div>
 </template>
@@ -28,6 +30,7 @@
     import LearnDocument from '~/components/organisms/learn/LearnDocument.vue'
     import LearnTest from '~/components/organisms/learn/LearnTest.vue'
     import LearnContents from '~/components/organisms/learn/LearnContents.vue'
+    import MovieNavigation from '~/components/organisms/learn/MovieNavigation.vue'
     import Footer from '~/components/organisms/common/Footer.vue'
 
     export default {
@@ -37,6 +40,7 @@
             LearnDocument,
             LearnTest,
             LearnContents,
+            MovieNavigation,
             Footer
         },
         head: {
@@ -55,10 +59,19 @@
         display: flex;
         justify-content: center;
     }
-
     .tabs {
         background-color: #fff;
         width: vw-pc(1000);
+    }
+    @media screen and (max-width: $breakpoint1-max) {
+        .tabs{
+            width: calc(100% - 30px);
+        }
+    }
+    @media screen and (min-width: $breakpoint2) {
+        .tabs{
+            width: 1000px;
+        }
     }
     .line{
         width: 100%;
@@ -81,7 +94,29 @@
         transition: all 0.2s ease;
         padding: 0 vw-pc(30);
     }
-
+    @media screen and (max-width: $breakpoint1-max) {
+        .tab_item {
+                height: vw-sp(80);
+                line-height: vw-sp(80);
+                font-size: vw-sp(18);
+                padding: 0 vw-sp(30);
+        }
+        .line{
+                top: vw-sp(80);
+        }
+    }
+    @media screen and (min-width: $breakpoint2) {
+        .tab_item {
+                height: 80px;
+                line-height: 80px;
+                font-size: 18px;
+                font-size: 1.8rem;
+                padding: 0 30px;
+        }
+        .line{
+                top: 80px;
+        }
+    }
     .tab_item:hover {
         opacity: 0.75;
     }
@@ -104,5 +139,14 @@
         color: #16325e;
         border-bottom: vw-pc(8) solid #16325e;
     }
-
+    @media screen and (max-width: $breakpoint1-max) {
+    .tabs input:checked+.tab_item {
+        border-bottom: vw-sp(8) solid #16325e;
+    }
+    }
+    @media screen and (min-width: $breakpoint2) {
+    .tabs input:checked+.tab_item {
+        border-bottom: 8px solid #16325e;
+    }
+    }
 </style>

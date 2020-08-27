@@ -4,7 +4,7 @@
             <div class="header-logo">
                 <h1><a href="index.html" class="on--opa"><img src="~/assets/img/common/ikusai-logo.svg" class="img--fit" alt="ikus.ai"></a></h1>
             </div>
-            <h2>ディープラーニングハンズオンコース</h2>
+            <h2 class="none--sp">{{learnTitle}}</h2>
             <div id="navigation" class="header-navi">
                     <div class="evaluation-btn"><a href="#">このコースを評価する</a></div>
                     <div class="mypage-btn">
@@ -12,14 +12,20 @@
                         <a href="#"><span>マイページに戻る</span></a>
                     </div>
             </div>
-            <div id="toggle" class="toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <h2 class="none--pc">{{learnTitle}}</h2>
         </header>
     </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      learnTitle: "ディープラーニングハンズオンコース"
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
     @import "~assets/scss/style.scss";
@@ -156,8 +162,34 @@
         content:"★ ";
         color: #cccccc;
         font-size: vw-pc(24);
-        position: relative;
-        bottom: vw-pc(3);
+    }
+    @media screen and (min-width: $breakpoint2) {
+        .evaluation-btn::before{
+            font-size: 24px;
+            font-size: 2.4rem;
+        }
+        .evaluation-btn{
+            line-height: 50px;
+            border-left: #b9c1ce solid 3px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint1-max) {
+        .mypage-btn{
+            display: none;
+        }
+        .header-navi{
+            max-width:vw-sp(300);
+        }
+        .evaluation-btn{
+            font-size: vw-sp(16);
+        }
+        .evaluation-btn::before {
+            font-size: vw-sp(16);
+        }
+        .header{
+            flex-wrap: wrap;
+        }
     }
     /*  header
 ------------------------------------------------------------------------------*/
@@ -231,7 +263,23 @@
         padding-left: vw-pc(20);
     }
 
-
+    @media screen and (min-width: $breakpoint2) {
+        .header h2{
+            font-size: 24px;
+            font-size: 2.4rem;
+        }
+    }
+    @media screen and (max-width: $breakpoint1-max) {
+        .header h2{
+            font-size: vw-sp(24);
+            padding-left: 4vw;
+            padding-right: 4vw;
+            margin-bottom: 2vw;
+        }
+        .header-logo[data-v-73e5bc54] {
+            width: 30vw;
+        }
+    }
     /* ------------------------------------ グローバルナビ（SP） */
     @media screen and (max-width: $breakpoint1) {
 

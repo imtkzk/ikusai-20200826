@@ -94,4 +94,88 @@
             }
         }
     }
+    @media screen and (max-width: $breakpoint1-max) {
+    .contents{
+        position: static;
+        top:0;
+        height: auto;
+        padding:vw-sp(20);
+        width: 100%;
+        .contents-in{
+            border: vw-sp(3) solid #16325e;
+            padding:vw-sp(30);
+            margin-bottom:vw-sp(30);
+            li{
+                line-height: vw-sp(50);
+            }
+             .title-big{
+                 font-size: vw-sp(18);
+                 .title-small{
+                    font-size: vw-sp(15);
+                    padding-left: vw-sp(20);
+                 }
+            }
+        }
+        .share{
+            .share-in{
+                height: vw-sp(60);
+                padding: 0 vw-sp(30);
+                max-width: vw-sp(400);
+                .icon{
+                    width: vw-sp(30);
+                }
+                .share-title{
+                    font-size: vw-sp(15);
+                }
+                .share-title::before{
+                    height: vw-sp(18);
+                    width: vw-sp(18);
+                    margin-right: vw-sp(10);
+                }
+            }
+        }
+    }
+    }
+
+    @media screen and (min-width: $breakpoint2) {
+    .contents{
+        top:100px;
+        width: 400px;
+        padding:20px;
+        .contents-in{
+            border: 3px solid #16325e;
+            padding:30px;
+            margin-bottom:30px;
+            li{
+                line-height: 50px;
+            }
+             .title-big{
+                 font-size: 18px;
+                 font-size: 1.8rem;
+                 .title-small{
+                    font-size: 15px;
+                    padding-left: 20px;
+                 }
+            }
+        }
+        .share{
+            .share-in{
+                height: 60px;
+                padding: 0 30px;
+                max-width: 400px;
+                .icon{
+                    width: 30px;
+                }
+                .share-title{
+                    font-size: 15px;
+                }
+                .share-title::before{
+                    height: 18px;
+                    width: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
 </style>
