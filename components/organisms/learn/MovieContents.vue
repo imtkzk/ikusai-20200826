@@ -64,7 +64,7 @@
         width: 100%;
     }
     .navigation{
-        font-weight: 600;
+        font-weight: 700;
         max-height: vw-pc(500);
         overflow-y:scroll;
         width: 100%;
@@ -74,6 +74,7 @@
             padding: vw-pc(25);
             height: vw-pc(80);
             h3{
+                font-weight: 700;
                 font-size: vw-pc(18);
                 font-family: $font2, $font1;
             }
@@ -106,6 +107,7 @@
 }
 
 .learn-acod-title {
+  font-size: vw-pc(18);
   position: relative;
   display: flex;
   align-items: center;
@@ -172,6 +174,7 @@
   align-items: center;
   background-color: $color-base;
   min-height: vw-pc(80);
+  font-size: vw-pc(18);
 }
 
 .learn-course li.current {
@@ -213,6 +216,9 @@
 }
 .current .learn-acod-title::before{
     background-color: #95e2c2;
+}
+.learn-acod-ragarea{
+  font-size: vw-pc(13);
 }
 .learn-acod-tagarea .learn-tags--time::before{
   content: "";

@@ -71,16 +71,18 @@
                 align-items: center; 
                 height: vw-pc(60);
                 padding: 0 vw-pc(30);
+                max-width: 450px;
                 .icon{
                     width: vw-pc(30);
                     img{
                         width: 100%;
                     }
                 }
+                .share-title{
+                    vertical-align: middle;
+                }
                 .share-title::before{
                     content:"";
-                    position: relative;
-                    top: vw-pc(3);
                     display: inline-block;
                     height: vw-pc(18);
                     width: vw-pc(18);

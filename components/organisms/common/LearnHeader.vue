@@ -142,16 +142,22 @@
             font-size: 1.6rem;
         }
     }
+
     .evaluation-btn{
         margin-right: vw-pc(20);
         font-weight: 600;
+        line-height: vw-pc(50);
+        display: flex;
+        align-items: center;
+        padding-left: vw-pc(20);
+        border-left: #b9c1ce solid vw-pc(3);
     }
     .evaluation-btn::before{
         content:"★ ";
         color: #cccccc;
         font-size: vw-pc(24);
         position: relative;
-        top: 2px;
+        bottom: vw-pc(3);
     }
     /*  header
 ------------------------------------------------------------------------------*/
@@ -198,8 +204,6 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding-left: vw-pc(20);
-            border-left: #b9c1ce solid vw-pc(3);
         }
     }
 
@@ -218,6 +222,7 @@
             width: calc(100% - 280px);
         }
     }
+
     .header h2{
         font-weight: 600;
         font-size: vw-pc(24);
