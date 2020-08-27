@@ -16,7 +16,8 @@ html {
 }
 body {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.75;
+  letter-spacing: .2em;
 }
 article,
 aside,
@@ -186,6 +187,16 @@ table {
 td,
 th {
   padding: 0;
+}
+ul > li{
+  list-style: disc;
+}
+ol > li{
+  list-style: decimal;
+}
+a{
+  color: #163261;
+  font-weight: 600;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1075,13 +1086,6 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #000;
-  background-color: #fff;
-}
 input,
 button,
 select,
@@ -1551,8 +1555,6 @@ pre {
   display: block;
   padding: 8.5px;
   margin: 0 0 9px;
-  font-size: 12px;
-  line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -5051,9 +5053,8 @@ a.thumbnail.active {
   color: #2b542c;
 }
 .alert-info {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
+  background-color: #f7f8f9;
+  color: #333;
 }
 .alert-info hr {
   border-top-color: #a6e1ec;
@@ -11205,6 +11206,7 @@ div.output_unrecognized a:hover {
 .rendered_html p code {
   color:#3cb371;
   padding: 3px 6px;
+  font-weight: 600;
 }
 .rendered_html pre code {
   background-color: #fff;
@@ -11223,8 +11225,8 @@ div.output_unrecognized a:hover {
   border-collapse: collapse;
   border-spacing: 0;
   color: black;
-  font-size: 12px;
   table-layout: fixed;
+  width: 100%;
 }
 .rendered_html thead {
   border-bottom: 1px solid black;
@@ -13065,4 +13067,8 @@ div#notebook {
     display: block;
     page-break-inside: avoid; 
   }
+}
+.warning{
+  padding: 20px;
+  border:solid 3px #35d390;
 }

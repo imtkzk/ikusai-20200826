@@ -26,6 +26,8 @@
 
     .header-navi{
         padding-right: vw-pc(30);
+        width: 100%;
+        max-width: vw-pc(500);
     }
 
     .mypage-btn {
@@ -145,11 +147,11 @@
         font-weight: 600;
     }
     .evaluation-btn::before{
-        content:"★";
+        content:"★ ";
         color: #cccccc;
-        font-size: 24px;
-        font-size: 2.4em;
-        vertical-align: middle;
+        font-size: vw-pc(24);
+        position: relative;
+        top: 2px;
     }
     /*  header
 ------------------------------------------------------------------------------*/
@@ -220,6 +222,8 @@
         font-weight: 600;
         font-size: vw-pc(24);
         letter-spacing: .2em;
+        width: 100%;
+        padding-left: vw-pc(20);
     }
 
 

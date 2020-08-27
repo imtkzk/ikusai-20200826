@@ -69,7 +69,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center; 
-                height: vw-pc(80);
+                height: vw-pc(60);
                 padding: 0 vw-pc(30);
                 .icon{
                     width: vw-pc(30);
