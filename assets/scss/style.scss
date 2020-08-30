@@ -152,6 +152,7 @@ input::-ms-reveal {
 
 $color-base: #fff;
 $color-main: #28d089;
+$color-orange: #f18d27;
 $color-thin: #e9f9f2;
 $color-text: #16325e;
 
@@ -167,19 +168,19 @@ $sp-width: 750;
 $pc-width: 1600;
 
 @function vw-sp($size, $viewport:750) {
-	$rate: 100 / $viewport;
-	@return $rate * $size * 1vw;
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
 }
 
 @function vw-pc($size, $viewport:1600) {
-	$rate: 100 / $viewport;
-	@return $rate * $size * 1vw;
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
 @mixin marker {
-	background: linear-gradient(transparent 60%, #f9ff49 60%);
+  background:linear-gradient(transparent 60%, #f9ff49 60%);
 }
 
 /*  THEME CSS
