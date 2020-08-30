@@ -11,12 +11,13 @@
                     </div>-->
                     </div>
                 </div>
-      <UserLearning />
-      <UserUncomplete />
-      <RecommendedCourses>おすすめの他のコース</RecommendedCourses>
-    </main>
+                <UserLearning />
+                <UserUncomplete />
+                <RecommendedCourses>おすすめの他のコース</RecommendedCourses>
+            </main>
             <Sidebar />
         </div>
+        <editModal />
         <Footer />
     </div>
 </template>
@@ -28,6 +29,7 @@
     import UserUncomplete from '~/components/organisms/mypage/main/UserUncomplete.vue'
     import RecommendedCourses from '~/components/organisms/mypage/main/RecommendedCourses.vue'
     import Sidebar from '~/layouts/Sidebar.vue'
+    import editModal from '~/components/organisms/mypage/editModal.vue'
     import Footer from '~/components/organisms/common/Footer.vue'
 
     export default {
@@ -38,6 +40,7 @@
             UserUncomplete,
             RecommendedCourses,
             Sidebar,
+            editModal,
             Footer
         }
     }

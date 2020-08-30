@@ -111,3 +111,27 @@ function payment() {
   }
 }
 payment();
+
+/*  buy modal
+-------------------------------------------------------*/
+function buy() {
+  var modal = document.getElementById('buy-modal');
+  if(!modal) return;
+
+  var overlay = document.getElementById('buy-overlay');
+  var closeBtn = document.getElementById('buy-close');
+  var showBtn01 = document.getElementById('buy-open');
+  var body = document.getElementById('top');
+
+  closemodal(overlay);
+  closemodal(closeBtn);
+  closemodal(showBtn01);
+  function closemodal(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      modal.classList.toggle('is-show');
+      body.classList.toggle('is-hidden');
+    });
+  }
+}
+buy();
