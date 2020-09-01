@@ -135,3 +135,51 @@ function buy() {
   }
 }
 buy();
+
+/*  TestPass modal
+-------------------------------------------------------*/
+function TestPass() {
+  var modal = document.getElementById('TestPass-modal');
+  if(!modal) return;
+
+  var overlay = document.getElementById('TestPass-overlay');
+  var closeBtn = document.getElementById('TestPass-close');
+  var showBtn01 = document.getElementById('TestPass-open');
+  var body = document.getElementById('top');
+
+  closemodal(overlay);
+  closemodal(closeBtn);
+  closemodal(showBtn01);
+  function closemodal(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      modal.classList.toggle('is-show');
+      body.classList.toggle('is-hidden');
+    });
+  }
+}
+TestPass();
+
+/*  TestFailure modal
+-------------------------------------------------------*/
+function TestFailure() {
+  var modal = document.getElementById('TestFailure-modal');
+  if(!modal) return;
+
+  var overlay = document.getElementById('TestFailure-overlay');
+  var closeBtn = document.getElementById('TestFailure-close');
+  var showBtn01 = document.getElementById('TestFailure-open');
+  var body = document.getElementById('top');
+
+  closemodal(overlay);
+  closemodal(closeBtn);
+  closemodal(showBtn01);
+  function closemodal(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      modal.classList.toggle('is-show');
+      body.classList.toggle('is-hidden');
+    });
+  }
+}
+TestFailure();

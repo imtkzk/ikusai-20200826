@@ -35,7 +35,7 @@
                     </div>
                 </dd>
                 </dl>
-                <div class="form-btn">
+                <div id="TestPass-open" class="form-btn">
                     <SendForm>回答を送信</SendForm>
                 </div>
             </div>
@@ -85,11 +85,11 @@
                 <dt><h3>回答</h3><p>画像単一選択式</p></dt>
                 <dd>
                     <div class="testAnser-type--img">
-                    <div><label><input type="radio" name="image" value="img" v-model="imageId">
+                    <div><label><input type="radio" name="image" value="img">
             <span><img src="~/assets/img/common/sample.png"></span></label></div>
-                    <div><label><input type="radio" name="image" value="img" v-model="imageId">
+                    <div><label><input type="radio" name="image" value="img">
             <span><img src="~/assets/img/common/sample.png"></span></label></div>
-                    <div><label><input type="radio" name="image" value="img" v-model="imageId">
+                    <div><label><input type="radio" name="image" value="img">
             <span><img src="~/assets/img/common/sample.png"></span></label></div>
                     </div>
                 </dd>
@@ -99,11 +99,17 @@
                 </div>
             </div>
         </div>
+        <TestPassModal />
     </div>
 </template>
 
 <script>
-export default {
+    import TestPassModal from '~/components/organisms/learn/TestPassModal.vue'
+
+    export default {
+        components: {
+            TestPassModal
+        },
   head() {
     return {
       script: [
