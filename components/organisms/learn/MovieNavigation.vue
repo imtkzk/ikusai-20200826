@@ -308,31 +308,31 @@
 
     @media screen and (max-width: $breakpoint1-max) {
         .learn-acod-title {
-        font-size: vw-sp(18);
-        height: vw-sp(80);
+        font-size: vw-sp(24);
+        height: vw-sp(120);
         }
         .learn-acod-title::before{
-        height: vw-sp(80);
-        width: vw-sp(80);
+        height: vw-sp(120);
+        width: vw-sp(120);
         margin-right: vw-sp(20);
         }
         .learn-acod-title.is-active::before {
-        height: vw-sp(80);
-        width: vw-sp(80);
+        height: vw-sp(120);
+        width: vw-sp(120);
         margin-right: vw-sp(20);
         }
         .learn-course li {
         min-height: vw-sp(80);
-        font-size: vw-sp(18);
+        font-size: vw-sp(24);
         }
         .learn-course li:before {
-        height: vw-sp(80);
-        width: vw-sp(80);
+        height: vw-sp(120);
+        width: vw-sp(120);
         margin-right: vw-sp(20);
         }
         .learn-course li.current:before {
-        height: vw-sp(80);
-        width: vw-sp(80);
+        height: vw-sp(120);
+        width: vw-sp(120);
         margin-right: vw-sp(20);
         }
         .learn-acod .learn-acod-tagarea .learn-tags--time{
@@ -369,7 +369,7 @@
         margin-right: vw-sp(10);
         }
         .learn-acod-content.is-open li {
-        height: vw-sp(80);
+        height: vw-sp(120);
         }
     }
     @media screen and (min-width: $breakpoint2) {

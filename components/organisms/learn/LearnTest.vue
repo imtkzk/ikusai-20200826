@@ -52,7 +52,7 @@
                     </div>
                 </dd>
                 </dl>
-                <div class="form-btn">
+                <div id="TestFailure-open" class="form-btn">
                     <SendForm>回答を送信</SendForm>
                 </div>
             </div>
@@ -100,15 +100,18 @@
             </div>
         </div>
         <TestPassModal />
+        <TestFailureModal />
     </div>
 </template>
 
 <script>
     import TestPassModal from '~/components/organisms/learn/TestPassModal.vue'
+    import TestFailureModal from '~/components/organisms/learn/TestFailureModal.vue'
 
     export default {
         components: {
-            TestPassModal
+            TestPassModal,
+            TestFailureModal
         },
   head() {
     return {
@@ -130,12 +133,25 @@
     .testInner > div{
         margin:4em 0;
     }
-    .testInner .testImg img{
+    .testInner img{
         width: 100%;;
     }
-    .testInner .testImg .testExplane{
+    .testInner .testExplane{
         font-size: 18px;
         font-size: 1.8rem;
+    }
+    @media screen and (max-width: $breakpoint2-max) {
+        .testInner .testExplane{
+            font-size: vw-pc(18);
+        }
+    }
+    @media screen and (max-width: $breakpoint1-max) {
+        .testInner .testExplane{
+            font-size: vw-sp(36);
+        }
+        .testInner{
+            font-size: vw-sp(32);
+        }
     }
     .Qtitle {
         display: flex;
@@ -161,6 +177,26 @@
             line-height: 36px;
             border-bottom:3px solid #16325e ;
         }
+    }
+    @media screen and (max-width: $breakpoint2-max) {
+      .Qtitle {
+          .Qnum{
+          font-size: vw-pc(24);
+          }
+          h2{
+          font-size: vw-pc(24);
+          }
+      }
+    }
+    @media screen and (max-width: $breakpoint1-max) {
+      .Qtitle {
+          .Qnum{
+          font-size: vw-sp(48);
+          }
+          h2{
+          font-size: vw-sp(48);
+          }
+      }
     }
     .testRequirements{
         background:#f8f8f8;
@@ -197,6 +233,32 @@
             }
         }
     }
+    @media screen and (max-width: $breakpoint2-max) {
+      .testRequirements{
+          .RequirementsTitle{
+              span{
+                  font-size: vw-pc(18);
+              }
+            span::before{
+                height: 2.125vw;
+                width: 2.125vw;
+            }
+          }
+      }
+    }
+    @media screen and (max-width: $breakpoint1-max) {
+      .testRequirements{
+          .RequirementsTitle{
+              span{
+                  font-size: vw-sp(36);
+              }
+            span::before{
+                height: 4vw;
+                width: 4vw;
+            }
+          }
+      }
+    }
     .testAnswer{
         padding-bottom:2em;
     }
@@ -226,6 +288,16 @@
       font-size: 2.4rem;
       font-weight: 700;
       margin: 0 1em 0 0;
+  }
+}
+@media screen and (max-width: $breakpoint2-max) {
+.form-input dt h3{
+      font-size: vw-pc(24);
+  }
+}
+@media screen and (max-width: $breakpoint1-max) {
+.form-input dt h3{
+      font-size: vw-sp(36);
   }
 }
 
@@ -590,11 +662,13 @@ textarea::-moz-placeholder {
 }
 .testAnser-type--img{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     
 }
 .testAnser-type--img > div{
     width: 30%;
+    min-width: 270px;
 }
 .testAnser-type--img > div img{
     width: 100%;

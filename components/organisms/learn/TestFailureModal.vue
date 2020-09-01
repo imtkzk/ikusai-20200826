@@ -1,21 +1,20 @@
 <template>
-  <div id="TestPass-modal" class="modal modal--large">
+  <div id="TestFailure-modal" class="modal modal--large">
     <div class="modal__in">
-      <div id="TestPass-close" class="close-btn"><span></span></div>
-      <h2 class="modal-head"><span>合格</span>おめでとうございます!!<br>「機械学習実践」試験は<br class="br--sp">全問正解でした!!</h2>
+      <div id="TestFailure-close" class="close-btn"><span></span></div>
+      <h2 class="modal-head"><span>不合格</span>惜しい!!<br>2 問正解 / 3 問中でした。</h2>
         <div class="TestPass-img">
-            <img src="~/assets/img/learn/testpass.png" srcset="~/assets/img/learn/testpass.png 1x,~/assets/img/learn/testpass-2x.png 2x" alt="合格">
+            <img src="~/assets/img/learn/testfailure.png" srcset="~/assets/img/learn/testfailure.png 1x,~/assets/img/learn/testfailure-2x.png 2x" alt="合格">
         </div>
-        <div class="share">
-            <ul class="share-in">
-                <li class="share-title">学んだ内容を共有する</li>
-                <li class="icon share-facebook"><a href="#"><img src="~/assets/img/learn/icon-facebook.png" alt="Facebook"></a></li>
-                <li class="icon share-twitter"><a href="#"><img src="~/assets/img/learn/icon-twitter.png" alt="twitter"></a></li>
-            </ul>
+        <div>
+          <p>不正解の箇所を確認して、動画で復習しよう！</p>
         </div>
         <div class="form">
         <div class="form-btn">
           <SendForm>次へ進む</SendForm>
+        </div>
+        <div class="form-btn">
+          <TestBackBtn>再度この章を学ぶ</TestBackBtn>
         </div>
       </div>
     </div>
@@ -25,10 +24,11 @@
 
 <script>
     import SendForm from '~/components/atoms/buttons/SendForm.vue'
+    import TestBackBtn from '~/components/atoms/buttons/TestBackBtn.vue'
 
     export default {
         components: {
-          SendForm
+          TestBackBtn
         }
     }
 </script>
@@ -180,7 +180,11 @@
   border-radius: vw-sp(15);
   z-index: 2;
 }
-
+.modal__in p{
+  font-weight: 700;
+  margin: 3em auto;
+  text-align: center;
+}
 .close-btn {
   position: absolute;
   right: vw-sp(25);
@@ -224,7 +228,7 @@
     font-size: 3.6rem;
     margin-bottom:1em;
     display: block;
-    color:$color-main;
+    color:#666666;
 }
 .modal-head--left {
   margin-bottom: 1em !important;
@@ -267,7 +271,6 @@
   .modal--large .modal__in {
     margin: vw-pc(100) auto;
     max-width: vw-pc(1100);
-    border:$color-main solid vw-pc(3);
   }
 
 
@@ -923,7 +926,7 @@ textarea::-moz-placeholder {
 /* ---------------------------------- component --> form-btn */
 
 .form-btn {
-  margin: 0 auto;
+  margin: 0 auto 2em;
   width: vw-sp(400);
   .cmn-btn {
     border: none !important;
