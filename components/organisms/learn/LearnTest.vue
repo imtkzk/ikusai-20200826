@@ -242,8 +242,8 @@
                   font-size: vw-pc(18);
               }
             span::before{
-                height: 2.125vw;
-                width: 2.125vw;
+                height: 1.125vw;
+                width: 1.125vw;
             }
           }
       }
@@ -669,7 +669,7 @@ textarea::-moz-placeholder {
     
 }
 .testAnser-type--img > div{
-    width: vw-pc(300);
+    width: vw-pc(280);
 }
 @media screen and (max-width: $breakpoint1){
   .testAnser-type--img > div{
