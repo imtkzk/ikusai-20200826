@@ -131,7 +131,7 @@
     @import "~assets/css/codeblock.css";
 
     .testInner > div{
-        margin:4em 0;
+        margin:3em 0;
     }
     .testInner img{
         width: 100%;;
@@ -192,9 +192,11 @@
       .Qtitle {
           .Qnum{
           font-size: vw-sp(48);
+          line-height: vw-sp(62);
           }
           h2{
           font-size: vw-sp(48);
+          line-height: vw-sp(62);
           }
       }
     }
@@ -663,7 +665,7 @@ textarea::-moz-placeholder {
 .testAnser-type--img{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 .testAnser-type--img > div{
@@ -819,27 +821,40 @@ textarea::-moz-placeholder {
   }
 
   .testAnser-type--img span{
-    padding: 0 50px 0 75px;
-    height: 60px;
     font-size: 18px; font-size: 1.8rem;
-  }
-
-  .testAnser-type--img span {
-    padding: 0 20px 0 60px;
   }
 
   .testAnser-type--img input[type="radio"] + span::before{
     left: 20px;
+    top:30px;
     width: 32px;
     height: 32px;
   }
 
   .testAnser-type--img input[type="radio"]:checked + span::after{
     left: 20px;
-    width: 16px;
-    height: 16px;
+    top:30px;
+    width: 32px;
+    height: 32px;
     border: 8px solid $color-base;
   }
+}
+  @media screen and (max-width: $breakpoint1-max) {
+    .form-input dd .testAnser-type--img > div{
+      margin-bottom: 0;
+    }
+    .testAnser-type--img input[type="radio"] + span::before{
+      width: vw-sp(30);
+      height: vw-sp(30);
+      top:4vw;
+      left:2vw;
+    }
+    .testAnser-type--img input[type="radio"]:checked + span::after{
+      width: vw-sp(36);
+      height: vw-sp(36);
+      top:4vw;
+      left:2vw;
+    }
 }
 
 /* ---------------------------------- checkbox */

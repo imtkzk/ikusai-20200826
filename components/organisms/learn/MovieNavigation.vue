@@ -71,10 +71,10 @@
             max-width: 100%;
             border-top: solid vw-sp(3) #16325e;
             .navigation-title{
-                padding: vw-sp(25);
-                height: vw-sp(80);
+                padding: vw-sp(50);
+                height: vw-sp(160);
                 h3{
-                    font-size: vw-sp(18);
+                    font-size: vw-sp(36);
                 }
             }
         }
@@ -308,7 +308,7 @@
 
     @media screen and (max-width: $breakpoint1-max) {
         .learn-acod-title {
-        font-size: vw-sp(24);
+        font-size: vw-sp(30);
         height: vw-sp(120);
         }
         .learn-acod-title::before{
@@ -323,7 +323,7 @@
         }
         .learn-course li {
         min-height: vw-sp(80);
-        font-size: vw-sp(24);
+        font-size: vw-sp(30);
         }
         .learn-course li:before {
         height: vw-sp(120);

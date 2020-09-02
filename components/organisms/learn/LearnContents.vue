@@ -106,12 +106,12 @@
             padding:vw-sp(30);
             margin-bottom:vw-sp(30);
             li{
-                line-height: vw-sp(50);
+                line-height: vw-sp(70);
             }
              .title-big{
-                 font-size: vw-sp(18);
+                 font-size: vw-sp(28);
                  .title-small{
-                    font-size: vw-sp(15);
+                    font-size: vw-sp(28);
                     padding-left: vw-sp(20);
                  }
             }
@@ -120,16 +120,16 @@
             .share-in{
                 height: vw-sp(60);
                 padding: 0 vw-sp(30);
-                max-width: vw-sp(400);
+                max-width: vw-sp(600);
                 .icon{
-                    width: vw-sp(30);
+                    width: vw-sp(40);
                 }
                 .share-title{
-                    font-size: vw-sp(15);
+                    font-size: vw-sp(28);
                 }
                 .share-title::before{
-                    height: vw-sp(18);
-                    width: vw-sp(18);
+                    height: vw-sp(30);
+                    width: vw-sp(30);
                     margin-right: vw-sp(10);
                 }
             }

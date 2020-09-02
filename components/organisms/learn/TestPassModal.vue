@@ -39,7 +39,8 @@
 
 
 .share{
-    max-width: 300px;
+  width:vw-pc(400);
+    max-width: 400px;
     margin:2em auto;
     border-radius: 6em;
     background-color: #f7f8f9;
@@ -49,7 +50,6 @@
         align-items: center; 
         height: vw-pc(60);
         padding: 0 vw-pc(30);
-        max-width: 450px;
         .icon{
             width: vw-pc(30);
             margin-left:1em;
@@ -72,6 +72,44 @@
             margin-right: vw-pc(10);
         }
     }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .share .share-in{
+    height: 60px;
+  }
+  .share .share-in .share-title{
+    font-size: 15px;
+  }
+  .share .share-in .share-title::before{
+    width: 20px;
+    height: 20px;
+  }
+  .share .share-in .icon{
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: $breakpoint1-max) {
+        .share{
+                width: 100%;
+                max-width: vw-sp(500);
+            .share-in{
+                height: vw-sp(60);
+                padding: 0 vw-sp(30);
+                .icon{
+                    width: vw-sp(40);
+                }
+                .share-title{
+                    font-size: vw-sp(24);
+                }
+                .share-title::before{
+                    height: vw-sp(18);
+                    width: vw-sp(18);
+                    margin-right: vw-sp(10);
+                }
+            }
+        }
 }
 .TestPass-img{
   text-align: center;
@@ -225,6 +263,11 @@
     margin-bottom:1em;
     display: block;
     color:$color-main;
+}
+@media screen and (max-width: $breakpoint1-max) {
+  .modal-head span{
+      font-size: vw-sp(56);
+  }
 }
 .modal-head--left {
   margin-bottom: 1em !important;

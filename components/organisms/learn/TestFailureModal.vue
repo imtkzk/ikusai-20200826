@@ -7,7 +7,7 @@
             <img src="~/assets/img/learn/testfailure.png" srcset="~/assets/img/learn/testfailure.png 1x,~/assets/img/learn/testfailure-2x.png 2x" alt="合格">
         </div>
         <div>
-          <p>不正解の箇所を確認して、動画で復習しよう！</p>
+          <p>不正解の箇所を確認して、<br class="none-pc">動画で復習しよう！</p>
         </div>
         <div class="form">
         <div class="form-btn">
@@ -181,6 +181,7 @@
   z-index: 2;
 }
 .modal__in p{
+  line-height: 6vw;
   font-weight: 700;
   margin: 3em auto;
   text-align: center;
@@ -217,7 +218,7 @@
 
 .modal-head {
   margin-bottom: 2em;
-  font-size: vw-sp(30);
+  font-size: vw-sp(36);
   text-align: center;
   font-weight: 700;
   line-height: 1.5em;
