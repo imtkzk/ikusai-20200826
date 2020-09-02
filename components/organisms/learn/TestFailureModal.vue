@@ -7,7 +7,7 @@
             <img src="~/assets/img/learn/testfailure.png" srcset="~/assets/img/learn/testfailure.png 1x,~/assets/img/learn/testfailure-2x.png 2x" alt="合格">
         </div>
         <div>
-          <p>不正解の箇所を確認して、<br class="none-pc">動画で復習しよう！</p>
+          <p>不正解の箇所を確認して、<br class="none--pc">動画で復習しよう！</p>
         </div>
         <div class="form">
         <div class="form-btn">
@@ -181,10 +181,17 @@
   z-index: 2;
 }
 .modal__in p{
-  line-height: 6vw;
   font-weight: 700;
-  margin: 3em auto;
+  margin: 2em auto;
   text-align: center;
+}
+@media screen and (max-width: $breakpoint1-max){
+  .modal__in p{
+    line-height: 8vw;
+    font-weight: 700;
+    margin: 2em auto;
+}
+
 }
 .close-btn {
   position: absolute;

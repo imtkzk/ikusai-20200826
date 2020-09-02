@@ -36,7 +36,7 @@
                 </dd>
                 </dl>
                 <div id="TestPass-open" class="form-btn">
-                    <SendForm>回答を送信</SendForm>
+                    <SendForm>回答を送信(合格した場合)</SendForm>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                 </dd>
                 </dl>
                 <div id="TestFailure-open" class="form-btn">
-                    <SendForm>回答を送信</SendForm>
+                    <SendForm>回答を送信(不合格の場合)</SendForm>
                 </div>
             </div>
         </div>
@@ -669,8 +669,12 @@ textarea::-moz-placeholder {
     
 }
 .testAnser-type--img > div{
-    width: 30%;
-    min-width: 270px;
+    width: vw-pc(300);
+}
+@media screen and (max-width: $breakpoint1){
+  .testAnser-type--img > div{
+      width: 100%;
+  } 
 }
 .testAnser-type--img > div img{
     width: 100%;
